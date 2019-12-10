@@ -1,0 +1,28 @@
+@import "mixins/media-breakpoints"
+
+/*==========  Desktop First  ==========*/
+  
+.container
+	max-width: 1200px
+	margin: 0 auto
+	padding: 0 15px
+
+/* <1200px (960px) */
++media-breakpoint-down(lg)
+  .container
+    max-width: 960px
+
+/* <992px (720px) */
++media-breakpoint-down(md)
+  .container
+    max-width: 720px
+
+/* <768px (540px) */
++media-breakpoint-down(sm)
+  .container
+    max-width: 540px
+
+/* <576px (auto) */
++media-breakpoint-down(xs)
+  .container
+    width: auto

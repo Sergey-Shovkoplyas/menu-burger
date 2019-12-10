@@ -1,0 +1,32 @@
+/*==========  Desktop First  ==========*/
+
+@mixin media-breakpoint-down($name)
+	@if $name == lg
+		@media (max-width: 1199.98px)
+			@content
+	@if $name == md
+		@media (max-width: 991.98px)
+			@content
+	@if $name == sm
+		@media (max-width: 767.98px)
+			@content
+	@if $name == xs
+		@media (max-width: 575.98px)
+			@content
+
+
+/*==========  Mobile First  ==========*/
+
+@mixin media-breakpoint-up($name)
+	@if $name == sm
+		@media (min-width: 576px)
+			@content
+	@if $name == md
+		@media (min-width: 768px)
+			@content
+	@if $name == ld
+		@media (min-width: 992px)
+			@content
+	@if $name == xl
+		@media (min-width: 1200px)
+			@content
