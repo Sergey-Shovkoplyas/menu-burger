@@ -13,6 +13,68 @@
 
 /* <768px (540px) */
 +media-breakpoint-down(sm)
+  body.lock 
+    overflow: hidden
+  .header__body	
+    height: 50px
+  .header__logo
+    flex-basis: 40px
+  .header__burger 
+    position: relative
+    z-index: 3
+    display: block
+    position: relative
+    width: 30px
+    height: 20px
+    & span 
+      position: absolute
+      top: 9px
+      width: 100%
+      height: 2px
+      background-color: #fff
+      transition: all .3s
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: #fff
+      transition: all .3s
+    &::before
+      top: 0
+    &::after 
+      bottom: 0
+    &.active  span
+      transform: scale(0)
+    &.active::before
+      transform: rotate(45deg)
+      top: 9px
+    &.active::after
+      transform: rotate(-45deg)
+      bottom: 9px
+
+  .header__menu 
+    position: fixed
+    top: -100%
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: scroll
+    background-color: #037efc
+    padding-top: 70px
+    transition: all .3s
+    &.active  
+      top: 0
+  .header__list
+    display: block
+    padding-left: 20px
+    font-size: 24px
+    li
+      margin: 0px 0px 20px 0px
+  .content 
+    padding-top: 60px
 
 /* <576px (auto) */
 +media-breakpoint-down(xs)

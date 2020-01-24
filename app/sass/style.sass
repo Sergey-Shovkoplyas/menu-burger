@@ -2,9 +2,66 @@
 @import "fonts"
 @import "container"
 
-.item
-	border: 1px solid green 
-	font-size: 30px
+body 
+	font-family: Arial, sans-serif
+	min-width: 320px
+
+.header
+	position: fixed
+	z-index: 50
+	top: 0
+	left: 0
+	width: 100%
+.header::before 
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #d683eb
+	z-index: 2
+
+.header__body	
+	position: relative
+	display: flex 
+	justify-content: space-between
+	height: 80px
+	align-items: center
+
+.header__logo
+	position: relative
+	z-index: 3
+	flex-basis: 60px
+	border-radius: 50%
+	overflow: hidden
+
+	img 
+		max-width: 100%
+
+.header__burger
+	display: none
+
+.header__list
+	position: relative
+	z-index: 3
+	margin: 0
+	padding: 0
+	display: flex
+	flex-wrap: wrap
+	li 
+		white-space: nowrap
+		list-style: none
+		margin-left: 20px
+
+.header__link
+	color: #fff 
+	text-transform: uppercase 
+	font-size: 18px
+
+.content
+	padding-top: 100px
+
 
 @import "media"
      
